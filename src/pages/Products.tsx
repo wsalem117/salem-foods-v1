@@ -34,10 +34,10 @@ const Products = () => {
     // Apply sorting
     result.sort((a, b) => {
       switch (filters.sort) {
-        case 'price-asc':
-          return (a.price ?? 0) - (b.price ?? 0)
-        case 'price-desc':
-          return (b.price ?? 0) - (a.price ?? 0)
+        case 'season-asc':
+          return a.season.start.localeCompare(b.season.start)
+        case 'season-desc':
+          return b.season.start.localeCompare(a.season.start)
         case 'name-asc':
           return a.name.localeCompare(b.name)
         case 'name-desc':

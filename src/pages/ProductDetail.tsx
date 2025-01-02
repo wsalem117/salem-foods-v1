@@ -57,10 +57,6 @@ const ProductDetail = () => {
               {product.description}
             </p>
 
-            <div className="text-3xl font-bold text-blue-500">
-              ${product.price.toFixed(2)}
-            </div>
-
             {product.features && (
               <div>
                 <h2 className="text-xl font-semibold">Key Features</h2>

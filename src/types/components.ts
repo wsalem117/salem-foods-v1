@@ -62,7 +62,7 @@ export interface Product {
 
 export interface ProductFilters {
   category: string
-  sort: 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc'
+  sort: 'name-asc' | 'name-desc' | 'season-asc' | 'season-desc'
   search: string
 }
 
