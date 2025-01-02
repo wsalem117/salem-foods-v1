@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Settings } from 'lucide-react'
 import SEO from '@/components/common/SEO'
 import { services } from '@/data/mockData'
 import Section from '@/components/common/Section'
@@ -27,10 +26,26 @@ const Services = () => {
       />
       <Section>
         <div className="mb-8 text-center">
-          <Settings className="mx-auto h-12 w-12" />
-          <h1 className="mt-4 text-4xl font-bold">Our Services</h1>
+          <div className="mx-auto h-12 w-12 text-primary-dark">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+              />
+            </svg>
+          </div>
+          <h1 className="mt-4 font-display text-4xl font-bold">
+            Agricultural Services
+          </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Explore our comprehensive range of services
+            Comprehensive farming and export solutions
           </p>
         </div>
 

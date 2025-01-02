@@ -25,14 +25,33 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             {product.description}
           </p>
-          <p className="mt-2 text-xs text-gray-500 dark:text-gray-500">
-            {product.category}
-          </p>
+          <div className="mt-2 space-y-1">
+            <p className="text-sm font-medium text-primary-dark">
+              {product.category}
+            </p>
+            {product.season && (
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Season: {product.season.start} - {product.season.end}
+              </p>
+            )}
+            {product.specs?.size && (
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Size: {product.specs.size}
+              </p>
+            )}
+          </div>
         </div>
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-blue-500">
-            ${product.price.toFixed(2)}
-          </span>
+          <div className="flex flex-wrap gap-1">
+            {product.certifications?.map((cert) => (
+              <span
+                key={cert}
+                className="inline-flex items-center rounded-full bg-primary-light/10 px-2 py-1 text-xs font-medium text-primary-dark"
+              >
+                {cert}
+              </span>
+            ))}
+          </div>
           <Link to={`/products/${product.id}`}>
             <Button size="sm">View Details</Button>
           </Link>

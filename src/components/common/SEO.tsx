@@ -9,15 +9,15 @@ interface SEOProps {
 }
 
 const SEO = ({ title, description, keywords, image, url }: SEOProps) => {
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://yoursite.com'
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://salemfoods.com'
   const defaultDescription =
-    'Your comprehensive solution for digital products and services'
+    'Premium Egyptian fruits and agricultural products for global markets'
   const defaultImage = `${siteUrl}/og-image.jpg`
 
   return (
     <Helmet>
       {/* Basic meta tags */}
-      <title>{`${title} | Your Site Name`}</title>
+      <title>{`${title} | Salem Foods`}</title>
       <meta name="description" content={description || defaultDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
 

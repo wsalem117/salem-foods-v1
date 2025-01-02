@@ -42,11 +42,22 @@ export interface Product {
   id: string
   name: string
   description: string
-  price: number
+  price?: number
   image: string
   category: string
   features?: string[]
-  specs?: Record<string, string>
+  specs?: {
+    size?: string
+    packaging?: string[]
+    shelfLife?: string
+    [key: string]: any
+  }
+  variety?: string
+  season?: {
+    start: string
+    end: string
+  }
+  certifications?: string[]
 }
 
 export interface ProductFilters {

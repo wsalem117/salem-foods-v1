@@ -18,9 +18,11 @@ const ProductGrid = ({ products }: ProductGridProps) => {
               <p className="mt-2 text-gray-600 dark:text-gray-400">
                 {product.description}
               </p>
-              <p className="mt-2 text-xl font-bold text-blue-500">
-                ${product.price.toFixed(2)}
-              </p>
+              {product.price !== undefined && (
+                <p className="mt-2 text-xl font-bold text-blue-500">
+                  ${product.price.toFixed(2)}
+                </p>
+              )}
             </div>
           </Card>
         </Link>

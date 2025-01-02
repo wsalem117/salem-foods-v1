@@ -8,9 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold">Company</h3>
+            <h3 className="font-display text-lg font-bold text-primary-dark">
+              Salem Foods
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Building amazing web experiences with React and TypeScript.
+              Leading Egyptian agricultural exports with premium fruits and
+              sustainable farming practices.
             </p>
           </div>
 
@@ -50,10 +53,13 @@ const Footer = () => {
             <h3 className="text-lg font-bold">Contact</h3>
             <ul className="mt-4 space-y-2">
               <li className="text-sm text-gray-600 dark:text-gray-400">
-                Email: info@example.com
+                Email: contact@salemfoods.com
               </li>
               <li className="text-sm text-gray-600 dark:text-gray-400">
-                Phone: (555) 123-4567
+                Phone: +20 (2) 123-4567
+              </li>
+              <li className="text-sm text-gray-600 dark:text-gray-400">
+                Address: Cairo, Egypt
               </li>
             </ul>
           </div>
@@ -92,7 +98,7 @@ const Footer = () => {
 
         <div className="mt-8 border-t border-gray-200 pt-8 dark:border-gray-700">
           <p className="text-center text-sm text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} Your Company. All rights reserved.
+            © {new Date().getFullYear()} Salem Foods. All rights reserved.
           </p>
         </div>
       </div>

@@ -12,8 +12,11 @@ const Header = () => {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold">
-              Logo
+            <Link
+              to="/"
+              className="font-display text-xl font-bold text-primary-dark"
+            >
+              Salem Foods
             </Link>
           </div>
 

@@ -43,12 +43,12 @@ const ProductFilterBar = ({
               sort: e.target.value as ProductFilters['sort'],
             })
           }
-          className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700"
+          className="rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-primary-dark focus:outline-none focus:ring-1 focus:ring-primary-dark dark:border-gray-600 dark:bg-gray-700"
         >
           <option value="name-asc">Name (A-Z)</option>
           <option value="name-desc">Name (Z-A)</option>
-          <option value="price-asc">Price (Low to High)</option>
-          <option value="price-desc">Price (High to Low)</option>
+          <option value="season-asc">Season (Early to Late)</option>
+          <option value="season-desc">Season (Late to Early)</option>
         </select>
       </div>
 

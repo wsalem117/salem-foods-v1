@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react'
-import { ShoppingBag } from 'lucide-react'
 import SEO from '@/components/common/SEO'
 import { products } from '@/data/mockData'
 import { ProductFilters } from '@/types/components'
@@ -36,9 +35,9 @@ const Products = () => {
     result.sort((a, b) => {
       switch (filters.sort) {
         case 'price-asc':
-          return a.price - b.price
+          return (a.price ?? 0) - (b.price ?? 0)
         case 'price-desc':
-          return b.price - a.price
+          return (b.price ?? 0) - (a.price ?? 0)
         case 'name-asc':
           return a.name.localeCompare(b.name)
         case 'name-desc':
@@ -60,10 +59,26 @@ const Products = () => {
       />
       <Section>
         <div className="mb-8 text-center">
-          <ShoppingBag className="mx-auto h-12 w-12" />
-          <h1 className="mt-4 text-4xl font-bold">Our Products</h1>
+          <div className="mx-auto h-12 w-12 text-primary-dark">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+              />
+            </svg>
+          </div>
+          <h1 className="mt-4 font-display text-4xl font-bold">
+            Premium Egyptian Produce
+          </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Discover our amazing product lineup
+            Discover our exceptional range of export-quality fruits
           </p>
         </div>
 
